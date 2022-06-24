@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>UHH Hauptcampus</title>
+    <meta name="description" content="Der UHH Hauptcampus im Herbst.">
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <img id="skyPicture" src="/PXL_20211105_135140666.PHOTOSPHERE.jpg">
+        <audio id="cafe" src="/Cafè_background.wav"></audio>
+        <audio id="fountain" src="/fountain_background.wav"></audio>
+      </a-assets>
+
+      <a-camera look-controls="reverseMouseDrag: true" position="0 1.6 0" wasd-controls-enabled="false"></a-camera>
+      <a-entity cursor="rayOrigin:mouse" id="cursor"></a-entity>
+      <a-sound src="#cafe" autoplay="true" position="30 5 12" loop="true" volume="4"></a-sound>
+      <a-sound src="#fountain" autoplay="true" position="-9 0 -11" loop="true" volume="3"></a-sound>
+
+      <a-sphere position="-43.5 10.5 -43.5" color="red">
+        <a-text opacity="0" position="-10 4.5 3.5" rotation="0 40 0" color="white" value="Psychologie" width="80"></a-text>
+      </a-sphere>
+
+      <a-sphere position="37 16 0" color="red">
+        <a-text opacity="0" position="0 3 -20" rotation="0 -90 0" color="white" value="Erziehungswissenschaften" width="80"></a-text>
+      </a-sphere>
+
+      <a-sphere position="3 48 58" color="red" scale="1.5 1.5 1.5">
+        <a-text opacity="0" position="-2 0 0" rotation="0 180 0" color="black" value="Philosophenturm" width="80"></a-text>
+      </a-sphere>
+
+      <a-sphere position="15 8 58" color="red" scale="1.5 1.5 1.5">
+        <a-text opacity="0" position="18 3 0" rotation="0 200 0" color="white" value="Anna-Siemsen-Hoersaal" width="60"></a-text>
+      </a-sphere>
+
+      <a-sphere position="-50 16 23" color="red">
+        <a-text opacity="0" position="0 -4 10" rotation="0 100 0" color="white" value="WiWi-Bunker" width="80"></a-text>
+      </a-sphere>
+
+      <a-sky src="#skyPicture"></a-sky>
+    </a-scene>
+
+    <script src="/script.js"></script>
+  </body>
+</html>
